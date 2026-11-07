@@ -1,7 +1,7 @@
 {
   "appId": "com.dueldive.app",
   "appName": "Duel Dive",
-  "webDir": ".",
+  "webDir": "dist",
   "bundledWebRuntime": false,
   "server": {
     "androidScheme": "https"

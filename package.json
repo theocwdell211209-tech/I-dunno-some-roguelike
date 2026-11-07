@@ -5,8 +5,9 @@
   "description": "DUEL//DIVE mobile card roguelike",
   "scripts": {
     "dev": "python3 -m http.server 8080",
-    "build:single-file": "node build-single-file.js",
-    "mobile:sync": "npx cap sync",
+    "build:mobile": "node build-mobile.js",
+    "mobile:sync": "npm run build:mobile && npx cap sync",
+    "mobile:build": "npm run mobile:sync && cd android && ./gradlew assembleDebug",
     "mobile:android": "npx cap open android",
     "mobile:ios": "npx cap open ios"
   },

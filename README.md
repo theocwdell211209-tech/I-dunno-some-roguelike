@@ -25,7 +25,7 @@ npx cap add ios
 npm run mobile:sync
 ```
 
-Open the generated native project with `npm run mobile:android` or `npm run mobile:ios`. The PWA remains the browser install path, while Capacitor provides native app projects from the same repository code. Native builds use `webDir: "."`, so gameplay changes—including LP persistence, mini-boss healing, shops, and item effects—are shared with mobile after running `npm run mobile:sync`.
+Open the generated native project with `npm run mobile:android` or `npm run mobile:ios`. The PWA remains the browser install path, while Capacitor provides native app projects from the same repository code. `npm run mobile:sync` builds the web bundle into `dist/` and copies it into the native projects, so gameplay changes—including LP persistence, mini-boss healing, shops, and item effects—are shared with mobile.
 
 ## Included in this prototype
 
@@ -42,12 +42,12 @@ Open the generated native project with `npm run mobile:android` or `npm run mobi
 
 The bundled catalog is normalized from [YGOJSON](https://github.com/iconmaster5326/YGOJSON) release v1 and is used as card metadata/search data plus the roguelike reward pool. Imported cards use a safe gameplay fallback effect; the smaller hand-authored cards retain their custom roguelike effects. The current card art is intentionally represented with original geometric symbols and color treatments so the project remains self-contained.
 
-## One-file mobile download
+## Android app
 
-Build `duel-dive.html` with:
+The Android deliverable is a native APK, not an HTML download. Install dependencies, configure an Android SDK and a supported JDK (17 or 21), then run:
 
 ```bash
-npm run build:single-file
+npm run mobile:build
 ```
 
-Copy or download that one HTML file to a phone and open it in a browser. It includes the interface, game logic, and full card database, works offline, and does not require the repository, a web server, npm, or Capacitor. Rebuild it after source changes.
+The debug APK is written to `android/app/build/outputs/apk/debug/app-debug.apk`. It bundles the game assets and runs offline; copy that single APK file to an Android phone to install it. `npm run mobile:sync` updates the native bundle without building.
