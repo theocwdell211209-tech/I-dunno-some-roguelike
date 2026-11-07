@@ -25,7 +25,7 @@ npx cap add ios
 npm run mobile:sync
 ```
 
-Open the generated native project with `npm run mobile:android` or `npm run mobile:ios`. The PWA remains the browser install path, while Capacitor provides native app projects from the same repository code.
+Open the generated native project with `npm run mobile:android` or `npm run mobile:ios`. The PWA remains the browser install path, while Capacitor provides native app projects from the same repository code. Native builds use `webDir: "."`, so gameplay changes—including LP persistence, mini-boss healing, shops, and item effects—are shared with mobile after running `npm run mobile:sync`.
 
 ## Included in this prototype
 
