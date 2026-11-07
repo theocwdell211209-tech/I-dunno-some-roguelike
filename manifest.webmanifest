@@ -1,0 +1,18 @@
+{
+  "name": "DUEL//DIVE — Monster Card Roguelike",
+  "short_name": "Duel Dive",
+  "description": "A neon, mobile-friendly monster-card roguelike.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
