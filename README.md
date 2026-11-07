@@ -52,4 +52,6 @@ npm run mobile:build
 
 The debug APK is written to `android/app/build/outputs/apk/debug/app-debug.apk`. It bundles the game assets and runs offline; copy that single APK file to an Android phone to install it. `npm run mobile:sync` updates the native bundle without building.
 
+The repository also includes the ready-to-install APK at `android/duel-dive.apk`.
+
 Every push to `main` also builds the APK with GitHub Actions and publishes `app-debug.apk` as the `duel-dive-android` workflow artifact for direct download.
