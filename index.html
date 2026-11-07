@@ -26,6 +26,7 @@
           <span class="chapter-label">SECTOR <b id="sector">01</b></span>
           <span class="seed-label">SEED <b id="seed">7F3A</b></span>
           <button class="icon-button install-button" id="install-btn" title="Install app" hidden>⇩</button>
+          <button class="icon-button" id="save-btn" title="Save slots">▣</button>
           <button class="icon-button" id="restart-btn" title="Start a new run">↻</button>
         </div>
       </header>
@@ -95,10 +96,24 @@
           </div>
         </div>
         <div class="hand-panel"><div class="hand-header"><span class="eyebrow">HAND <b id="hand-count">5</b> / 9</span><span class="muted" id="battle-log">Draw Phase — choose a card.</span><span class="eyebrow">DECK <b id="draw-count">15</b></span></div><div id="hand" class="hand"></div></div>
-        <div class="battle-actions"><span class="phase-readout">PHASE <b id="phase-label">MAIN 1</b></span><button class="secondary-button" id="battle-action-btn">BATTLE PHASE <span>→</span></button><button class="secondary-button" id="end-turn-btn">END TURN <span>→</span></button></div>
+        <div class="battle-actions"><span class="phase-readout">PHASE <b id="phase-label">MAIN 1</b></span><button class="secondary-button" id="use-item-btn" disabled>USE ITEM <b id="item-count">0</b></button><button class="secondary-button" id="battle-action-btn">BATTLE PHASE <span>→</span></button><button class="secondary-button" id="end-turn-btn">END TURN <span>→</span></button></div>
       </section>
 
       <div id="overlay" class="overlay hidden"><div id="overlay-card" class="overlay-card"></div></div>
+      <div id="shop-overlay" class="overlay hidden">
+        <div class="overlay-card shop-card">
+          <div class="save-heading"><div><p class="eyebrow">POST-DUEL MARKET // WAVE <b id="shop-wave">0</b></p><h2>Choose one purchase.</h2></div><div class="shop-wallet">G <b id="shop-gold">0</b></div></div>
+          <p class="muted" id="shop-message">One purchase per shop. The character pack is always available.</p>
+          <div id="shop-offers" class="shop-offers"></div>
+        </div>
+      </div>
+      <div id="save-overlay" class="overlay hidden">
+        <div class="overlay-card save-card">
+          <div class="save-heading"><div><p class="eyebrow">RUN ARCHIVE // LOCAL DEVICE</p><h2>Save slots</h2></div><button class="text-button" id="close-save-btn">CLOSE</button></div>
+          <p class="muted">Keep up to five separate runs on this device. Saves include the current duel, deck, wave, and unlock progress.</p>
+          <div id="save-slots" class="save-slots"></div>
+        </div>
+      </div>
     </main>
     <script src="game.js"></script>
   </body>

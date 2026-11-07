@@ -29,12 +29,13 @@ Open the generated native project with `npm run mobile:android` or `npm run mobi
 
 ## Included in this prototype
 
-- Branching run map with battles, elite encounters, events, a shop, and a final core duel
+- 200-wave run map with battles, elite encounters, events, a post-duel shop, and a final core duel
 - Energy-based card combat with monsters, spells, traps, shields, healing, draw effects, and enemy intents
 - Master Format-inspired duels with 8000 LP, Normal Summons, tribute requirements, monster zones, Battle Phase, and turn phases
 - 200-wave draft gauntlet with three-card picks after every clear, escalating difficulty, bosses every 10 waves, randomized protagonist/villain milestones, and a fixed Zarc final boss
 - Character-select opening with automatically unlocked series leads, persistent unlocks for completed runs, and four curated 10-card starter packs based on the selected character
-- Deck viewer, card rewards, gold, relics, and restartable runs
+- Card rewards, real-world booster-pack entries, guaranteed character packs, healing, consumables, permanent relic buffs, and gold
+- Five local save slots with mid-duel snapshots, plus mini-boss victories that restore the player's duel LP to 8000
 - Anime vault with Orichalcos cards and selected anime-exclusive monsters, spells, traps, and Synchros
 - Bundled 14,616-card JSON catalog with searchable TCG/OCG, anime, token, and skill records
 - Responsive layout for desktop and mobile screens
