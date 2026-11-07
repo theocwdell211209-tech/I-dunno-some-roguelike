@@ -44,12 +44,14 @@ public class MainActivity extends BridgeActivity {
                 int latestCode = latest.getInt("versionCode");
                 if (latestCode <= getPackageManager().getPackageInfo(getPackageName(), 0).versionCode) return;
                 String versionName = latest.optString("versionName", "new version");
-                runOnUiThread(() -> new AlertDialog.Builder(this)
-                    .setTitle("Update available")
-                    .setMessage("Duel Dive " + versionName + " is ready. Download and install it now?")
-                    .setNegativeButton("Later", null)
-                    .setPositiveButton("Update", (dialog, which) -> downloadAndInstall()))
-                    .show());
+                runOnUiThread(() -> {
+                    new AlertDialog.Builder(this)
+                        .setTitle("Update available")
+                        .setMessage("Duel Dive " + versionName + " is ready. Download and install it now?")
+                        .setNegativeButton("Later", null)
+                        .setPositiveButton("Update", (dialog, which) -> downloadAndInstall())
+                        .show();
+                });
             } catch (Exception ignored) {
                 // Updates are optional; the game remains playable offline.
             }
