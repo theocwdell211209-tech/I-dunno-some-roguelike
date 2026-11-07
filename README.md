@@ -41,3 +41,13 @@ Open the generated native project with `npm run mobile:android` or `npm run mobi
 - Responsive layout for desktop and mobile screens
 
 The bundled catalog is normalized from [YGOJSON](https://github.com/iconmaster5326/YGOJSON) release v1 and is used as card metadata/search data plus the roguelike reward pool. Imported cards use a safe gameplay fallback effect; the smaller hand-authored cards retain their custom roguelike effects. The current card art is intentionally represented with original geometric symbols and color treatments so the project remains self-contained.
+
+## One-file mobile download
+
+Build `duel-dive.html` with:
+
+```bash
+npm run build:single-file
+```
+
+Copy or download that one HTML file to a phone and open it in a browser. It includes the interface, game logic, and full card database, works offline, and does not require the repository, a web server, npm, or Capacitor. Rebuild it after source changes.
