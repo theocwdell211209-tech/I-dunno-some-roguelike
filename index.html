@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arc-V Deck Builder Roguelike</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Yu-Gi-Oh Arc-V Deck Builder Roguelike</h1>
+    <p>Build your deck (Arc-V and earlier), then clear the dungeon.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Deck Builder</h2>
+      <div class="builder-tools">
+        <input id="card-search" type="search" placeholder="Search card..." />
+        <button id="reset-deck" type="button">Reset Deck</button>
+      </div>
+      <div class="meta">
+        <span id="pool-count"></span>
+        <span id="deck-count"></span>
+      </div>
+      <div class="list-wrap">
+        <ul id="card-pool" class="card-list"></ul>
+      </div>
+      <h3>Your Deck</h3>
+      <div class="list-wrap">
+        <ul id="deck-list" class="card-list"></ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2D Roguelike</h2>
+      <canvas id="game-canvas" width="320" height="320" aria-label="Dungeon map"></canvas>
+      <button id="start-run" type="button">Start / Restart Run</button>
+      <div class="controls">
+        <button data-move="up" type="button">↑</button>
+        <div class="row">
+          <button data-move="left" type="button">←</button>
+          <button data-move="down" type="button">↓</button>
+          <button data-move="right" type="button">→</button>
+        </div>
+      </div>
+      <div id="battle" class="battle hidden">
+        <h3>Battle</h3>
+        <p id="battle-status"></p>
+        <div class="battle-row">
+          <button id="draw-attack" type="button">Draw & Attack</button>
+          <button id="retreat" type="button">Retreat (-1 HP)</button>
+        </div>
+      </div>
+      <p id="game-status"></p>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
