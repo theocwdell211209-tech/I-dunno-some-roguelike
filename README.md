@@ -38,7 +38,9 @@ Open the generated native project with `npm run mobile:android` or `npm run mobi
 - Five local save slots with mid-duel snapshots, plus mini-boss victories that restore the player's duel LP to 8000
 - Anime vault with Orichalcos cards and selected anime-exclusive monsters, spells, traps, and Synchros
 - Bundled 14,616-card JSON catalog with searchable TCG/OCG, anime, token, and skill records
-- Responsive layout for desktop and mobile screens
+- Responsive layout for desktop and mobile screens with real card-art thumbnails from the bundled catalog data
+- Expanded character roster across DM, GX, 5D's, ZEXAL, and ARC-V; only series leads start unlocked and completed runs unlock one additional character at a time
+- Native Android update checking: the app checks `android/version.json`, prompts for newer builds, downloads the repository APK, and opens the Android installer
 
 The bundled catalog is normalized from [YGOJSON](https://github.com/iconmaster5326/YGOJSON) release v1 and is used as card metadata/search data plus the roguelike reward pool. Imported cards use a safe gameplay fallback effect; the smaller hand-authored cards retain their custom roguelike effects. The current card art is intentionally represented with original geometric symbols and color treatments so the project remains self-contained.
 
