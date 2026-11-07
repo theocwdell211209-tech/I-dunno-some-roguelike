@@ -14,6 +14,19 @@ Then open <http://localhost:8080>.
 
 On a supported mobile browser, use the install prompt in the top-right or the browser's "Add to Home Screen" action. The app shell is cached for offline play after the first visit.
 
+## Package as a native mobile app
+
+The same app can be packaged for Android or iOS with Capacitor:
+
+```bash
+npm install
+npx cap add android
+npx cap add ios
+npm run mobile:sync
+```
+
+Open the generated native project with `npm run mobile:android` or `npm run mobile:ios`. The PWA remains the browser install path, while Capacitor provides native app projects from the same repository code.
+
 ## Included in this prototype
 
 - Branching run map with battles, elite encounters, events, a shop, and a final core duel
